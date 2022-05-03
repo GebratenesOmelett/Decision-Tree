@@ -59,3 +59,15 @@ model.fit(data_train,label_train)
 
 score = model.score(data_test, label_test)
 print(score)
+
+y_predicted = model.predict(data_test)
+
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix(label_test, y_predicted)
+
+import matplotlib.pyplot as plt
+import seaborn as sn
+plt.figure(figsize=(10,7))
+sn.heatmap(cm, annot=True,cmap='Blues', fmt='g')
+plt.xlabel('Predicted')
+plt.ylabel('Truth')
