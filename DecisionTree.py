@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun May  1 00:45:26 2022
-
-@author: Aleksy
-"""
-
 import pandas as pd
 df = pd.read_csv("students_adaptability_level_online_education.csv")
 df.head()
